@@ -1,0 +1,40 @@
+Objectives
+Build on top of your OOP knowledge
+Get practice working with Interfaces
+Get practice with Abstract Classes
+
+
+Create a the following *IConsumable* interface (code provided), that contains properties for Name, Calories, IsSweet, and IsSpicy, and a method for GetInfo()
+
+
+Refactor the former Food class to implement the IConsumable interface (code provided)
+  
+Create a Drink class that implements the IConsumable interface. Make sure Drink objects are always sweet.
+
+Convert Ninja to an abstract class. Child classes of Ninja should determine when they are full, and how they eat - or rather *consume*, as we now have both Food and Drink. (code provided)
+
+Make a child class of Ninja, for a SweetTooth. A SweetTooth should be "full" at 1500 calories. When a SweetTooth "Consumes":
+
+If NOT Full
+adds calorie value to SweetTooth's total calorieIntake (+10 additional calories if the consumable item is "Sweet")
+adds the randomly selected IConsumable object to SweetTooth's ConsumptionHistory list
+calls the IConsumable object's GetInfo() method
+If Full
+issues a warning to the console that the SweetTooth is full and cannot eat anymore
+
+
+Make a child class of Ninja, for a SpiceHound. A SpiceHound should be "full" at 1200 calories. When a SpiceHound "Consumes":
+
+If NOT Full
+adds calorie value to SpiceHound's total calorieIntake (-5 additional calories if the consumable item is "Spicy")
+adds the randomly selected IConsumable object to SpiceHound's ConsumptionHistory list
+calls the IConsumable object's GetInfo() method
+If Full
+issues a warning to the console that the SpiceHound is full and cannot eat anymore
+
+ Build out the IConsumable interface as specified
+ Build out the Food, Drink, Ninja, SweetTooth, and SpiceHound classes as specified
+ Revisit the Buffet class to contain a Menu of IConsumables, and add a few Drinks to the Menu
+ In your Program's Main method: instantiate a Buffet, a SweetTooth, and a SpiceHound.
+ In your Program's Main method: have both the SweetTooth and Spice hound "Consume" from the Buffet until Full.
+ In your Program's Main method: write to the console which of the two consumed the most items and the number of items consumed.
